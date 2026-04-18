@@ -42,13 +42,13 @@ const ContactPage = () => (
                     <div className="font-medium text-foreground group-hover:text-accent transition-colors">+92 301 8252797</div>
                   </div>
                 </a>
-                <a href="mailto:iaaenterprises@gmail.com" className="flex items-center gap-4 group">
+                <a href="mailto:iaa.enterprises@outlook.com" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Email</div>
-                    <div className="font-medium text-foreground group-hover:text-accent transition-colors">iaaenterprises@gmail.com</div>
+                    <div className="font-medium text-foreground group-hover:text-accent transition-colors">iaa.enterprises@outlook.com</div>
                   </div>
                 </a>
                 <div className="flex items-center gap-4">
