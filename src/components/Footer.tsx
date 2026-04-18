@@ -125,8 +125,8 @@ const Footer = () => {
               <a href="tel:+923018252797" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-accent" /> +92 301 8252797
               </a>
-              <a href="mailto:iaaenterprises@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Mail className="w-4 h-4 text-accent" /> iaaenterprises@gmail.com
+              <a href="mailto:iaa.enterprises@outlook.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+                <Mail className="w-4 h-4 text-accent" /> iaa.enterprises@outlook.com
               </a>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent flex-shrink-0" /> Karachi, Pakistan
