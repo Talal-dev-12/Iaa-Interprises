@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const socialLinks = [
@@ -93,7 +93,7 @@ const Footer = () => {
               ].map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className="text-sm text-primary-foreground/70 hover:text-accent transition-colors w-fit"
                 >
                   {link.label}

@@ -1,5 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 
@@ -14,12 +17,12 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-navy-light/30">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <Link to="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <span className="text-xl md:text-2xl font-display font-bold text-primary-foreground tracking-tight">
             IAA<span className="text-accent"> Enterprises</span>
           </span>
@@ -30,9 +33,9 @@ const Header = () => {
           {navLinks.map((link) => (
             <Link
               key={link.path}
-              to={link.path}
+              href={link.path}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === link.path
+                pathname === link.path
                   ? "text-accent"
                   : "text-primary-foreground/80 hover:text-primary-foreground"
               }`}
@@ -68,10 +71,10 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 onClick={() => setMobileOpen(false)}
                 className={`px-4 py-3 text-sm font-medium rounded-md transition-colors ${
-                  location.pathname === link.path
+                  pathname === link.path
                     ? "text-accent bg-navy-light/20"
                     : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-navy-light/10"
                 }`}

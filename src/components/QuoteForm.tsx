@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, Loader2, ShieldCheck } from "lucide-react";
 
 // ── reCAPTCHA helpers ────────────────────────────────────────────────────────
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "";
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 
 function loadRecaptchaScript(): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -160,6 +162,7 @@ const QuoteForm = () => {
       {/* ── Honeypot (invisible to humans) ── */}
       <div
         aria-hidden="true"
+        tabIndex={-1}
         style={{
           position: "absolute",
           left: "-9999px",
@@ -168,8 +171,7 @@ const QuoteForm = () => {
           height: 0,
           overflow: "hidden",
           opacity: 0,
-          tabIndex: -1,
-        } as React.CSSProperties}
+        }}
       >
         <label htmlFor="website">Website</label>
         <input

@@ -1,30 +1,29 @@
-# Node modules (dependencies)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencies
 node_modules/
 
-# Environment variables (sensitive data)
-.env
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+build/
 
 # Logs
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build folders
-dist/
-build/
 
 # OS files
 .DS_Store
 Thumbs.db
 
-# IDE / Editor folders
+# IDE
 .vscode/
 .idea/
-
-# Optional: dotenv variants
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
